@@ -7,3 +7,26 @@ git commit -m "Initial commit - Masum Notes website"
 git branch -M main
 git remote add origin https://github.com/masum171.git
 git push -u origin main
+masum-notes/
+├── app/                  # Routes (App Router)
+│   ├── page.tsx          # Home
+│   ├── books/page.tsx    # Book summaries
+│   ├── blog/             # Articles (MDX-powered)
+│   │   ├── page.tsx      # Article list
+│   │   └── [slug]/page.tsx
+│   ├── notes/page.tsx    # Daily short notes
+│   ├── about/page.tsx
+│   ├── contact/page.tsx
+│   ├── sitemap.ts        # Auto-generated sitemap.xml
+│   ├── robots.ts         # Auto-generated robots.txt
+│   ├── icon.png          # Favicon
+│   └── layout.tsx        # Fonts, global metadata, Navbar/Footer shell
+├── components/           # Navbar, Footer, Hero, BookCard, BlogCard, NoteCard,
+│                          # ShareButton, CopyQuote, RelatedPosts, TableOfContents
+├── content/blog/*.mdx     # Blog posts (frontmatter: title, date, description, tags)
+├── lib/
+│   ├── mdx.ts             # Reads/parses MDX, computes reading time
+│   ├── books-data.ts      # Book data (edit this to add/remove books)
+│   └── notes-data.ts      # Daily notes data
+├── public/images/         # Book covers + OG image (placeholders included)
+└── styles/globals.css
